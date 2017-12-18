@@ -12,7 +12,7 @@ app.listen(PORT, function () {
 
 const log = console.log;
 app.use(function (req, res, next) {
-    console.log('石头');
+    res.setHeader("Access-Control-Allow-Origin", "*");
     next();
 });
 const ticketsJsonStr = fs.readFileSync('lina.d/tickets.json', 'utf-8');

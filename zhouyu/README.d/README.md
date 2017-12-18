@@ -19,7 +19,7 @@
 * path param: no param
 * usage
   + special id:
-    - [fuyao-post-special-id](fuyao-post-special-id.png)
+    - ![fuyao-post-special-id](fuyao-post-special-id.png)
   + all:
-    - [fuyao-post-all](fuyao-post-all.png)
+    - ![fuyao-post-all](fuyao-post-all.png)
 

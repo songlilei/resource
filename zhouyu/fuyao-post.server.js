@@ -5,13 +5,12 @@ const bodyParser = require('body-parser');
 const app = express();
 const server = require('http').createServer(app);
 
-app.use(bodyParser.urlencoded({extended: true}));
-
-app.post('/urlencode', function (req, res) {
-    console.log();
-    res.send({j: req.body, x: 1});
+app.use(function (req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
 });
 
+app.use(bodyParser.urlencoded({extended: true}));
 
 //处理付瑶的数据
 const userInfoJsonStr = fs.readFileSync('fuyao.d/users.json', 'utf-8');
